@@ -160,7 +160,7 @@ class App {
   if(speech.includes('-')){
     this.sub(speech);
   }else
-  if(speech.includes('multiply')||(speech.includes('x'))||(speech.includes('multiplied'))){
+  if((speech.includes('multiply'))||(speech.includes('x'))||(speech.includes('multiplied'))||(speech.includes('into'))){
     this.multiply(speech);
   }else
   if(speech.includes('/')){
@@ -243,11 +243,17 @@ this.divide2(speech);
     var secondnum =parseInt(speech.split(' ')[2]);
     console.log("first num ",firstnum," second num ",secondnum);
    var  sum =firstnum * secondnum;
+   if(isNaN(sum)){
+     console.log(" nan");
+    var notans = this.wrongAns();
+    this.printIt(notans);
+    this.speak(this.wrongAns);
+   }else{
        var reply = 'The Answer is '+sum;
   const utterThis = new SpeechSynthesisUtterance(reply);
    self.setVoice(utterThis);
   self.synth.speak(utterThis);
-  this.printIt(reply);
+  this.printIt(reply);}
 }
   divide(speech){
     self=this;
@@ -342,7 +348,7 @@ this.printIt(reply);
       self.setVoice(utterThis);
       self.synth.speak(utterThis);
     });
-  return 'the weather condition in '+ city +' is mostly full of haze at a temperature of 35 degrees Celcius`'
+  return 'the weather condition in '+ city +' is mostly full of haze at a temperature of 35 degrees Celcius'
   }
 
   openUrl(url) {
