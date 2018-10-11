@@ -301,7 +301,7 @@ this.printIt(reply);
     self = this;
     var city=speech.split(' ')[5];
     console.log(city);
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${speech.split(' ')[5]}&appid=6aa90859f3e957ff6c77ec9b1bc86296&units=metric`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${speech.split(' ')[5]}&appid=6aa90859f3e957ff6c77ec9b1bc86296&units=metric`
     if ('caches' in window) {
       caches.match(url).then(function(response) {
         if (response) {
