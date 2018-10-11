@@ -160,7 +160,7 @@ class App {
   if(speech.includes('-')){
     this.sub(speech);
   }else
-  if(speech.includes('multiply')||(speech.includes('x'))){
+  if(speech.includes('multiply')||(speech.includes('x'))||(speech.includes('multiplied'))){
     this.multiply(speech);
   }else
   if(speech.includes('/')){
@@ -243,6 +243,7 @@ this.divide2(speech);
     var secondnum =parseInt(speech.split(' ')[2]);
     console.log("first num ",firstnum," second num ",secondnum);
    var  sum =firstnum * secondnum;
+       var reply = 'The Answer is '+sum;
   const utterThis = new SpeechSynthesisUtterance(reply);
    self.setVoice(utterThis);
   self.synth.speak(utterThis);
