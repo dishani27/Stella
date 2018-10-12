@@ -11,18 +11,19 @@ body {
   width: 100%; 
 }
 .container {
-  position: absolute;
-  left: 18%;
-  border: 1px solid #f2efe2;
-  width: 60vw;
-  max-width: 60vw;
-  margin: 0 auto;
-  border-radius: 0.1rem;
-  background: #f2efe2;
-  padding: 0.2rem 1rem;
-  color: #1e2440;
-  /* overflow-y: scroll; */
-  margin-top: 10vh;
+     position: absolute;
+    left: 18%;
+    border: 1px solid;
+    width: 60vw;
+    max-width: 60vw;
+    margin: 0 auto;
+    border-radius: 0.1rem;
+    box-shadow: 0px 1px 14px 0 indianred, 3px 0px 2px 0 indianred;
+    background: indianred;
+    padding: 0.2rem 1rem;
+    color: #1e2440;
+    /* overflow-y: scroll; */
+    margin-top: 10vh;
   
 }
 
